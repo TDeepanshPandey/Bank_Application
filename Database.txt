@@ -1,0 +1,45 @@
+CREATE TABLE `bankonlineproject` (
+  `accountid` int(11) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `emailid` varchar(45) NOT NULL,
+  `accounttype` varchar(45) NOT NULL,
+  `dob` varchar(45) NOT NULL,
+  `pannumber` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `pincode` varchar(45) NOT NULL,
+  `mobile` int(50) NOT NULL,
+  `balance` int(11) NOT NULL,
+  PRIMARY KEY (`accountid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE DEFINER=`root`@`localhost` TRIGGER `project`.`bankonlineproject_AFTER_INSERT` AFTER INSERT ON `bankonlineproject` FOR EACH ROW
+BEGIN
+insert into project.transactionlog values(new.accountid, 0,0,"Account Created",now());
+END
+
+CREATE DEFINER=`root`@`localhost` TRIGGER `project`.`bankonlineproject_AFTER_UPDATE` AFTER UPDATE ON `bankonlineproject` FOR EACH ROW
+BEGIN
+declare typetrans varchar(50);
+IF (OLD.BALANCE < NEW.BALANCE)
+THEN
+set typetrans='credit';
+ELSE 
+SET  typetrans='debit';
+END IF;
+insert into project.transactionlog values (new.accountid, old.balance, new.balance,typetrans,now());
+END
+
+CREATE TABLE `transactionlog` (
+  `accountid` int(11) NOT NULL,
+  `oldbalance` int(11) DEFAULT NULL,
+  `newbalance` int(11) DEFAULT NULL,
+  `type` varchar(45) DEFAULT NULL,
+  `remarks` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `usercred` (
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
