@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+# Bank Application Using Spring MVC
 
-You can use the [editor on GitHub](https://github.com/TDeepanshPandey/Bank_Application/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+The main objective of this project is to automate the various functions and activities of the bank through internet. The project will facilitate to the bank employees and the account holders with the different modules. A bank customer can perform transactional tasks through online banking, including-
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+ - Viewing account balance
+ - Viewing the amount of money withdrawn. 
+ - Viewing the amount of money deposited in the bank.
+ - Viewing the computer generated report of transaction.
+ - Opening account in the bank.
 
-### Markdown
+This project will allow you to be able to do everything that you can in your regular banking institution, only with the benefit that you can do it all right from the convenience of your own home. With the problems and limitations associated with manual banking procedures witnessed in most organization today, compiled with the problems associated with the existing application programs even much more in the presence of serious technological advances aimed at improving information system. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**Screenshot**
 
-```markdown
-Syntax highlighted code block
+![Code Screenshot](https://github.com/TDeepanshPandey/Bank_Application/blob/master/screenshot2.PNG)
 
-# Header 1
-## Header 2
-### Header 3
+![Window1 Screenshot](https://github.com/TDeepanshPandey/Bank_Application/blob/master/screenshot1.PNG)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/TDeepanshPandey/Bank_Application/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
+![Window2 Screenshot](https://github.com/TDeepanshPandey/Bank_Application/blob/master/screenshot3.PNG)
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
